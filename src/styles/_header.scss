@@ -2,7 +2,6 @@
 .menu {
   @include container;
   display: flex;
-
   place-content: center;
   .menu-list {
     display: flex;
@@ -11,7 +10,6 @@
     padding: 16px 20px;
     border-bottom: 2px solid $primary-color;
     a {
-      display: block;
       color: $secondary-color;
       padding: 8px 20px;
       text-transform: uppercase;

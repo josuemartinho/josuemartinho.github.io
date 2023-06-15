@@ -11,7 +11,17 @@ body {
   font-family: "Circular Std Medium";
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  display: block;
+}
+
 .menu {
+  display: grid;
   max-width: 1060px;
   margin: 0 auto;
   display: flex;
@@ -25,7 +35,6 @@ body {
   border-bottom: 2px solid #b7ddb4;
 }
 .menu .menu-list a {
-  display: block;
   color: #001606;
   padding: 8px 20px;
   text-transform: uppercase;
@@ -33,4 +42,78 @@ body {
 .menu .menu-list a:hover, .menu .menu-list a:focus {
   background-color: #b7ddb4;
   transition: 0.2s;
+}
+
+.introduce {
+  display: grid;
+  max-width: 1060px;
+  margin: 0 auto;
+  position: relative;
+  justify-items: center;
+  place-content: center;
+  height: 90vh;
+  gap: 40px;
+}
+.introduce .introduce-text {
+  text-transform: uppercase;
+  text-align: center;
+  color: #001606;
+}
+.introduce .introduce-text h1 {
+  font-size: 48px;
+  margin-bottom: 8px;
+  position: relative;
+}
+.introduce .introduce-text h1::before {
+  content: "";
+  height: 12px;
+  width: 64px;
+  display: inline-block;
+  background-color: #b7ddb4;
+  position: absolute;
+  z-index: -1;
+  bottom: 8px;
+}
+.introduce .introduce-text h1::after {
+  content: "|";
+  opacity: 1;
+  animation: pulsing 1s infinite;
+}
+.introduce .introduce-text p {
+  font-size: 20px;
+}
+.introduce .icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.introduce .icons a {
+  padding: 12px;
+}
+.introduce .icons a:hover {
+  transition: 0.2s;
+  transform: scale(1.2);
+}
+.introduce .arrow {
+  animation: slide-down 1s infinite;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes pulsing {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=main.css.map */

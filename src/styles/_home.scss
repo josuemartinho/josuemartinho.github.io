@@ -1,1 +1,74 @@
 @import "utilidades";
+
+.introduce {
+  @include container;
+  position: relative;
+  justify-items: center;
+  place-content: center;
+  height: 90vh;
+  gap: 40px;
+  .introduce-text {
+    text-transform: uppercase;
+    text-align: center;
+    color: $secondary-color;
+    h1 {
+      font-size: 48px;
+      margin-bottom: 8px;
+      position: relative;
+
+      &::before {
+        content: "";
+        height: 12px;
+        width: 64px;
+        display: inline-block;
+        background-color: $primary-color;
+        position: absolute;
+        z-index: -1;
+        bottom: 8px;
+      }
+      &::after {
+        content: "|";
+        opacity: 1;
+        animation: pulsing 1s infinite;
+      }
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    a {
+      padding: 12px;
+      &:hover {
+        transition: 0.2s;
+        transform: scale(1.2);
+      }
+    }
+  }
+  .arrow {
+    animation: slide-down 1s infinite;
+  }
+}
+@keyframes slide-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes pulsing {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
