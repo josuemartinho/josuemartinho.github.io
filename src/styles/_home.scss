@@ -5,7 +5,7 @@
   position: relative;
   justify-items: center;
   place-content: center;
-  height: 90vh;
+  height: 100vh;
   gap: 40px;
   .introduce-text {
     text-transform: uppercase;
@@ -25,6 +25,8 @@
         position: absolute;
         z-index: -1;
         bottom: 8px;
+        opacity: 0;
+        animation: slide-left 12s 1;
       }
       &::after {
         content: "|";
@@ -52,15 +54,24 @@
     animation: slide-down 1s infinite;
   }
 }
-@keyframes slide-down {
+@keyframes slide-left {
   0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-down {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
 @keyframes pulsing {

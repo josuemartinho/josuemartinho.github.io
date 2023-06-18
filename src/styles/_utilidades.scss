@@ -8,6 +8,7 @@ $bg-color: #ffffff;
 }
 @mixin container() {
   display: grid;
+  justify-content: center;
   max-width: 1060px;
   margin: 0 auto;
 }
