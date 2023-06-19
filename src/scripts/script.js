@@ -1,12 +1,10 @@
-const theTitle = document.querySelector(".introduce-text h1");
-
-function writingMachine(element) {
-  const someText = element.innerHTML.split("");
-  element.innerHTML = "";
-  someText.forEach((letter, index) => {
-    setTimeout(() => {
-      element.innerHTML += letter;
-    }, 80 * index);
+fetch("https://api.github.com/users/josuemartinho/repos")
+  .then((response) => response.json())
+  .then((data) => {
+    // Manipule os dados obtidos aqui
+    console.log(data);
+  })
+  .catch((error) => {
+    // Trate qualquer erro que ocorra durante a requisição
+    console.log(error);
   });
-}
-writingMachine(theTitle);

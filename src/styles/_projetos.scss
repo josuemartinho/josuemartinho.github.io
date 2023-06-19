@@ -1,1 +1,68 @@
 @import "utilidades";
+
+.projetos {
+  @include container;
+  padding: 40px 20px;
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .projetos-list {
+    background-color: $bg-color;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    li {
+      @include shadowForAll;
+      padding: 12px 28px;
+      border-radius: 8px;
+      h2 {
+        display: flex;
+        font-size: 20px;
+        margin-bottom: 8px;
+        gap: 8px;
+        justify-content: space-between;
+        align-items: center;
+        &:after {
+          content: "";
+          display: inline-block;
+          width: 200px;
+          height: 2px;
+          background-color: $secondary-color;
+        }
+      }
+      span {
+        display: inline-block;
+        align-items: center;
+        background-color: $primary-color;
+        padding: 4px 12px;
+        margin-bottom: 12px;
+      }
+      p {
+        margin-bottom: 12px;
+      }
+      .buttons {
+        display: flex;
+        gap: 40px;
+        .rep {
+          color: black;
+          padding: 4px 8px;
+          background-color: $tertiary-color;
+          &:hover {
+            transition: 0.2s;
+            transform: scale(1.1);
+          }
+        }
+        .dem {
+          color: white;
+          padding: 4px 8px;
+          background-color: $secondary-color;
+          &:hover {
+            transition: 0.2s;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

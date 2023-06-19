@@ -4,7 +4,7 @@ $tertiary-color: #ddb4b4;
 $bg-color: #ffffff;
 
 @mixin shadowForAll() {
-  box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 @mixin container() {
   display: grid;

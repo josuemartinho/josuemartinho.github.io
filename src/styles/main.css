@@ -56,7 +56,7 @@ a {
   justify-items: center;
   place-content: center;
   height: 100vh;
-  gap: 40px;
+  gap: 24px;
 }
 .introduce .introduce-text {
   text-transform: uppercase;
@@ -65,6 +65,8 @@ a {
 }
 .introduce .introduce-text h1 {
   font-size: 48px;
+  opacity: 0;
+  animation: showUp 1s forwards 0.1ms;
   margin-bottom: 8px;
   position: relative;
 }
@@ -75,10 +77,10 @@ a {
   display: inline-block;
   background-color: #b7ddb4;
   position: absolute;
+  opacity: 0;
+  animation: slide-left 2s forwards 2s;
   z-index: -1;
   bottom: 8px;
-  opacity: 0;
-  animation: slide-left 12s 1;
 }
 .introduce .introduce-text h1::after {
   content: "|";
@@ -86,12 +88,27 @@ a {
   animation: pulsing 1s infinite;
 }
 .introduce .introduce-text p {
+  opacity: 0;
+  animation: showUp 1s forwards 2s;
   font-size: 20px;
+  margin-bottom: 8px;
+  position: relative;
+}
+.introduce .line {
+  content: "";
+  display: block;
+  background-color: #b7ddb4;
+  width: 200px;
+  height: 2px;
+  opacity: 0;
+  animation: showUp 2s forwards 2.1s;
 }
 .introduce .icons {
   display: flex;
   align-items: center;
   gap: 20px;
+  opacity: 0;
+  animation: showUp 2s forwards 2.1s;
 }
 .introduce .icons a {
   padding: 12px;
@@ -100,10 +117,15 @@ a {
   transition: 0.2s;
   transform: scale(1.2);
 }
-.introduce .arrow {
-  animation: slide-down 1s infinite;
-}
 
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes slide-left {
   0% {
     opacity: 0;
@@ -112,14 +134,6 @@ a {
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-@keyframes slide-down {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
   }
 }
 @keyframes pulsing {
@@ -174,4 +188,74 @@ a {
   justify-items: center;
   gap: 48px;
   padding: 40px 0;
+}
+
+.projetos {
+  display: grid;
+  justify-content: center;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.projetos h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.projetos .projetos-list {
+  background-color: #ffffff;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+.projetos .projetos-list li {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  padding: 12px 28px;
+  border-radius: 8px;
+}
+.projetos .projetos-list li h2 {
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 8px;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+.projetos .projetos-list li h2:after {
+  content: "";
+  display: inline-block;
+  width: 200px;
+  height: 2px;
+  background-color: #001606;
+}
+.projetos .projetos-list li span {
+  display: inline-block;
+  align-items: center;
+  background-color: #b7ddb4;
+  padding: 4px 12px;
+  margin-bottom: 12px;
+}
+.projetos .projetos-list li p {
+  margin-bottom: 12px;
+}
+.projetos .projetos-list li .buttons {
+  display: flex;
+  gap: 40px;
+}
+.projetos .projetos-list li .buttons .rep {
+  color: black;
+  padding: 4px 8px;
+  background-color: #ddb4b4;
+}
+.projetos .projetos-list li .buttons .rep:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+.projetos .projetos-list li .buttons .dem {
+  color: white;
+  padding: 4px 8px;
+  background-color: #001606;
+}
+.projetos .projetos-list li .buttons .dem:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
 }/*# sourceMappingURL=main.css.map */
