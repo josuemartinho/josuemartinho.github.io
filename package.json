@@ -1,0 +1,20 @@
+{
+  "name": "josuemartinho.github.io",
+  "version": "1.0.0",
+  "description": "Meu portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josuemartinho/meu-portifolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josuemartinho/meu-portifolio/issues"
+  },
+  "homepage": "https://github.com/josuemartinho/meu-portifolio#readme"
+}
