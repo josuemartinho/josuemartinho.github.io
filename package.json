@@ -4,7 +4,6 @@
   "description": "Meu portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node build.js"
   },
   "repository": {
@@ -16,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/josuemartinho/meu-portifolio/issues"
   },
-  "homepage": "https://github.com/josuemartinho/meu-portifolio#readme"
+  "homepage": "https://github.com/josuemartinho/meu-portifolio#readme",
+  "dependencies": {
+    "fs-extra": "^11.1.1"
+  }
 }
