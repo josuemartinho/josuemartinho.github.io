@@ -12,3 +12,9 @@ $bg-color: #ffffff;
   max-width: 1060px;
   margin: 0 auto;
 }
+::-webkit-scrollbar {
+  background-color: $secondary-color;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+}
